@@ -1,35 +1,17 @@
 package com.kodilla.testing;
 
 import com.kodilla.testing.calculator.Calculator;
+import com.kodilla.testing.user.SimpleUser;
+import com.kodilla.testing.collection.OddNumbersExterminator;
+
+import java.util.ArrayList;
 
 public class TestingMain {
     public static void main (String[] args){
 
-        int a = 2;
-        int b = 1;
+        ArrayList<Integer> numbers = new ArrayList<Integer>();
 
-        Calculator simpleCalculator = new Calculator();
-
-        Integer resultAdd = simpleCalculator.add(a,b);
-
-        if(resultAdd.equals(3)){
-
-            System.out.println("Addition est passed!");
-
-        } else {
-
-            System.out.println("ERROR!");
-        }
-
-        Integer resultSubtract = simpleCalculator.subtract(a,b);
-
-        if(resultSubtract.equals(1)){
-
-            System.out.println("Subtraction test passed!");
-
-        } else {
-
-            System.out.println("ERROR!");
-        }
+        numbers.add(1);
+        numbers.add(2);
     }
 }
