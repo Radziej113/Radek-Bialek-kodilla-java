@@ -5,6 +5,6 @@ import java.util.HashMap;
 public class NewOrderStock implements OrderStock {
     @Override
     public OrderDto createOrder(User user, HashMap<String, Integer> orderList) {
-        return null;
+        return new OrderDto(user, 1, 150, true);
     }
 }
