@@ -4,5 +4,5 @@ import java.util.HashMap;
 
 public interface OrderStock {
 
-    OrderDto createOrder(User user, HashMap<String, Integer> orderList);
+    OrderDto createOrder(User user, HashMap<Product, Integer> orderList);
 }

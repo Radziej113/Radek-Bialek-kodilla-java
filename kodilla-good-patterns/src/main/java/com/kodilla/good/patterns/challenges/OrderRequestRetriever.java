@@ -8,12 +8,12 @@ public class OrderRequestRetriever {
 
         User user = new User("John", "Wick");
 
-        HashMap<String, Integer> orderList = new HashMap<>();
-        orderList.put("Toothbrush red", 1);
-        orderList.put("Toothbrush green", 2);
-        orderList.put("Neighbours - card game", 1);
-        orderList.put("Buckwheat 1 kg", 3);
+        HashMap<Product, Integer> orderMap = new HashMap<>();
+        orderMap.put(new Product("Toothbrush red", 1.99), 1);
+        orderMap.put(new Product("Toothbrush green", 1.99), 2);
+        orderMap.put(new Product("Neighbours - card game", 20.01), 1);
+        orderMap.put(new Product("Buckwheat 1 kg", 4.95), 3);
 
-        return new OrderRequest(user, orderList);
+        return new OrderRequest(user, orderMap);
     }
 }

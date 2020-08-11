@@ -5,18 +5,18 @@ import java.util.HashMap;
 public class OrderRequest {
 
     User user;
-    HashMap<String, Integer> orderList;
+    HashMap<Product, Integer> orderMap;
 
-    public OrderRequest(User user, HashMap<String, Integer> orderList) {
+    public OrderRequest(User user, HashMap<Product, Integer> orderMap) {
         this.user = user;
-        this.orderList = orderList;
+        this.orderMap = orderMap;
     }
 
     public User getUser() {
         return user;
     }
 
-    public HashMap<String, Integer> getOrderList() {
-        return orderList;
+    public HashMap<Product, Integer> getOrderMap() {
+        return orderMap;
     }
 }

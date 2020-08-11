@@ -13,14 +13,15 @@ public class ProductOrderService {
     }
 
     public OrderDto process(final OrderRequest orderRequest) {
-        boolean isOrdered = orderService.order(orderRequest.getUser(), orderRequest.getOrderList());
+        boolean isOrdered = orderService.order(orderRequest.getUser(), orderRequest.getOrderMap());
 
         if(isOrdered) {
             informationService.inform(orderRequest.getUser());
-            orderStock.createOrder(orderRequest.getUser(), orderRequest.getOrderList());
-            return new OrderDto(orderRequest.getUser(), 1, 150, true);
+            orderStock.createOrder(orderRequest.getUser(), orderRequest.getOrderMap());
+            return new OrderDto(orderRequest.getUser(),
+                    new PriceCalculator().calculatePrice(orderRequest.getOrderMap()), true);
         } else {
-            return new OrderDto(orderRequest.getUser(), 0,0,false);
+            return new OrderDto(orderRequest.getUser(),0,false);
         }
     }
 }

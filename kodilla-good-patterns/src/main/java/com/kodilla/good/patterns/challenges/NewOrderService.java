@@ -4,10 +4,12 @@ import java.util.HashMap;
 
 public class NewOrderService implements OrderService {
 
-    public boolean order(final User user, final HashMap<String, Integer> orderList) {
+    public boolean order(final User user, final HashMap<Product, Integer> orderMap) {
         System.out.println("Receiving order form " + user.getName() + " " + user.getSurname());
-        orderList.keySet().stream().
-                forEach(System.out::println);
+        orderMap.keySet()
+                .stream()
+                .map(product -> product.getName())
+                .forEach(System.out::println);
         return true;
     }
 }

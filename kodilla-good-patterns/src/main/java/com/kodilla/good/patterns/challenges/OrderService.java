@@ -4,5 +4,5 @@ import java.util.HashMap;
 
 public interface OrderService {
 
-    boolean order(User user, HashMap<String, Integer> orderList);
+    boolean order(User user, HashMap<Product, Integer> orderList);
 }
