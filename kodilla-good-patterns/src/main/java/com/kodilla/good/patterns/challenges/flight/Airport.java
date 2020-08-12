@@ -2,11 +2,11 @@ package com.kodilla.good.patterns.challenges.flight;
 
 import java.util.Objects;
 
-public class Airport {
+public final class Airport {
 
-    String name;
+    public final String name;
 
-    public Airport(String name) {
+    public Airport(final String name) {
         this.name = name;
     }
 

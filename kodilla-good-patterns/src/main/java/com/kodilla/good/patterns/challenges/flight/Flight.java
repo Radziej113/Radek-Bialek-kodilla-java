@@ -2,12 +2,12 @@ package com.kodilla.good.patterns.challenges.flight;
 
 import java.util.Objects;
 
-public class Flight {
+public final class Flight {
 
-    Airport departureAirport;
-    Airport arrivalAirport;
+    public final Airport departureAirport;
+    public final Airport arrivalAirport;
 
-    public Flight(Airport departureAirport, Airport arrivalAirport) {
+    public Flight(final Airport departureAirport, final Airport arrivalAirport) {
         this.departureAirport = departureAirport;
         this.arrivalAirport = arrivalAirport;
     }
